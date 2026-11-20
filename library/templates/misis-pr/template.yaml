@@ -1,0 +1,26 @@
+name: Практическая МИСИС (полная)
+category: ВУЗ
+description: 'Практическая работа по методичке МИСИС: титул, содержание, введение
+  с целью и задачами, разделы, заключение и список источников.'
+tags:
+- МИСИС
+- ПР
+- ГОСТ 7.32
+meta:
+  work_type: Практическая работа
+  discipline: ''
+  module: null
+  semester: 3
+  teacher: ______________
+  file_code: TPUPR
+  toc: true
+  intro: true
+  conclusion: ЗАКЛЮЧЕНИЕ
+  h1_new_page: true
+roles: []
+fixed_sections: []
+prompt_hints: ''
+brief_skeleton:
+  task: ''
+  data: ''
+  decisions: ''

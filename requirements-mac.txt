@@ -1,0 +1,21 @@
+# NEON.DOC для macOS (Apple Silicon M1–M5). Ставит install_mac.command.
+fastapi>=0.110
+uvicorn>=0.29
+python-multipart>=0.0.9
+pywebview>=5.0          # окно на системном WebKit (тянет pyobjc)
+pymupdf>=1.24
+docx2pdf>=0.1.8         # PDF через Microsoft Word для Mac, если он установлен
+openpyxl>=3.1
+python-pptx>=1.0
+pillow>=10
+mlx-whisper>=0.4        # расшифровка на видеочипе Apple (вместо CUDA)
+huggingface_hub>=0.23  # докачка Whisper при установке
+faster-whisper>=1.1     # запасной вариант на CPU
+sherpa-onnx>=1.10       # разделение по участникам
+sounddevice>=0.4.6
+soundfile>=0.12
+numpy
+python-docx>=1.1
+pydantic>=2.6
+PyYAML>=6.0
+requests>=2.31

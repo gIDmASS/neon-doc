@@ -1,0 +1,32 @@
+# --- личные данные и результаты работы (только на твоём компьютере) ---
+profile.yaml
+settings.yaml
+works/
+wdocs/
+chats/
+transcripts/
+tasks/
+Хранилище/
+models/
+_backup_*/
+neondoc.log
+*.log
+
+# --- корпоративные шаблоны и демо на рабочих данных ---
+library/worktpl/
+tests/wdocs_demo.py
+
+# --- личные тестовые запуски ---
+lr2_*.bat
+
+# --- служебное ---
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.venv/
+~$*
+*.tmp
+.DS_Store
+dist/
+build/

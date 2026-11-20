@@ -1,0 +1,25 @@
+NEON.DOC на Windows 10/11 — установка
+=====================================
+
+Нужно заранее:
+  • Видеокарта NVIDIA с 24 ГБ памяти для qwen3.6:27b (с меньшей памятью выбери модель поменьше в «Настройках»).
+  • Microsoft Word — для превью шаблонов и PDF.
+
+1. Распакуй NEON.DOC-windows.zip в удобное место, например в «Документы» (не запускай из «Загрузок»).
+
+2. Поставь Miniconda (https://docs.conda.io/en/latest/miniconda.html) в папку по умолчанию:
+   C:\Users\<имя>\miniconda3
+
+3. Поставь Ollama (https://ollama.com/download) и скачай модель — в командной строке:
+     ollama pull qwen3.6:27b
+
+4. Двойной клик по install_app.bat — создаст окружение conda «reportgen» и поставит библиотеки
+   (около 2–3 ГБ, вместе с библиотеками CUDA для Whisper).
+
+5. Скопируй profile.example.yaml в profile.yaml и впиши своё ФИО, группу, преподавателя.
+
+6. Запуск — run_app.bat. Whisper для голоса скачается при первом использовании
+   (или «Настройки → Загрузить Whisper»).
+
+Если окно не открылось — причина в neondoc.log; запасной вариант: python -m neondoc --browser.
+Обновление после новых версий — update_app.bat.
