@@ -1,0 +1,32 @@
+name: Release
+
+# Новый тег версии (git tag v2.1.0 && git push --tags) -> архивы для Windows и Mac на странице Releases
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Тег релиза, например v2.0.0"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Собрать архивы
+        run: python tools/pack_release.py --out dist
+      - name: Опубликовать релиз
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.event.inputs.tag || github.ref_name }}
+          name: NEON.DOC ${{ github.event.inputs.tag || github.ref_name }}
+          body_path: .github/RELEASE_NOTES.md
+          files: dist/*.zip
